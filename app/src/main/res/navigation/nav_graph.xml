@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/casdastroFragment">
+
+    <fragment
+        android:id="@+id/casdastroFragment"
+        android:name="br.senai.sp.cotia.todolistapp.fragment.CasdastroFragment"
+        android:label="fragment_casdastro"
+        tools:layout="@layout/fragment_casdastro" />
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="br.senai.sp.cotia.todolistapp.fragment.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" />
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="br.senai.sp.cotia.todolistapp.fragment.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principalFragment_to_casdastroFragment"
+            app:destination="@id/casdastroFragment" />
+        <action
+            android:id="@+id/action_principalFragment_to_visuFragment"
+            app:destination="@id/visuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/visuFragment"
+        android:name="br.senai.sp.cotia.todolistapp.fragment.VisuFragment"
+        android:label="fragment_visu"
+        tools:layout="@layout/fragment_visu" >
+        <action
+            android:id="@+id/action_visuFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+    </fragment>
+</navigation>
