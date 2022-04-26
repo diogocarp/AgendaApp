@@ -32,15 +32,15 @@
         android:text="@string/descricao"
         android:textAlignment="center"
         android:textSize="50px"
-        android:layout_marginTop="400px"/>
+        android:layout_marginTop="300px"/>
 
     <EditText
         android:gravity="top"
         android:id="@+id/view2"
         android:inputType="textCapSentences|textMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="350px"
-        android:layout_marginTop="520px"
+        android:layout_height="100px"
+        android:layout_marginTop="400px"
         ></EditText>
 
     <TextView
@@ -50,21 +50,21 @@
         android:text="@string/data"
         android:textAlignment="center"
         android:textSize="50px"
-        android:layout_marginTop="900px"/>
+        android:layout_marginTop="550px"/>
 
     <Button
         android:id="@+id/botaoData"
         android:layout_width="500px"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1050px"
+        android:layout_marginTop="700px"
         android:layout_marginLeft="300px"
-        android:text="Selecionar"></Button>
+        android:text="@string/selecionar"></Button>
 
     <Button
         android:id="@+id/botaoSalvar"
         android:layout_width="300px"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1250px"
+        android:layout_marginTop="830px"
         android:layout_marginLeft="400px"
         android:text="Salvar"></Button>
 

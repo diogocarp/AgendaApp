@@ -1,9 +1,14 @@
 package br.senai.sp.cotia.todolistapp.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 
+@Entity
 public class Tarefa {
 
+    @PrimaryKey(autoGenerate = true)
     private Long idTarefa;
     private String titulo;
     private String descricao;
@@ -25,7 +30,7 @@ public class Tarefa {
 
     public void setTitulo(
 
-    ) {
+            String s) {
         this.titulo = titulo;
     }
 
