@@ -156,6 +156,7 @@ public class CasdastroFragment extends Fragment {
         protected void onPostExecute(String resposta) {
             if(resposta.equals("OK, tudo certo!")){
                 Log.w("RESULTADO", "OK TUDO CERTO");
+                getActivity().onBackPressed();
 
             }else{
                 Log.w("RESULTADO", resposta);

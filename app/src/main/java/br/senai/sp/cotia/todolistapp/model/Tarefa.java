@@ -66,4 +66,12 @@ public class Tarefa {
         this.dataFinalizada = dataFinalizada;
     }
 
+    // informa se a tarefa esta concluida
+    public boolean isConcluida(){
+
+        return dataFinalizada !=0;
+
+    }
+
+
 }

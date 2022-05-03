@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/caixa_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <TextView
+            android:id="@+id/item_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estudar Android"
+            android:textSize="50px"/>
+
+        <TextView
+            android:id="@+id/item_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10/02/2021"
+            android:textSize="40px"
+            android:layout_marginTop="20px"
+            />
+
+        <TextView
+            android:id="@+id/item_status"
+            android:layout_marginTop="20px"
+            android:background="@color/green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/concluida"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
