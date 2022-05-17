@@ -6,19 +6,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.PrincipalFragment">
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/recycler_tarefas"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_tarefas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_add_tarefa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_input_add"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+android:id="@+id/btn_add_tarefa"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:src="@android:drawable/ic_input_add"
+app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

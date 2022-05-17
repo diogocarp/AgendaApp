@@ -1,6 +1,7 @@
 package br.senai.sp.cotia.todolistapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +24,16 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     // variavel para o Context
     private Context context;
 
+    // variavel do tipo OnTaefaClickListener
+
+    private OnTarefaClickListener listenerClickTarefa;
+
+
     // comstrutor pra receber os valores
-    public TarefaAdapter(List<Tarefa> lista, Context contexto){
+    public TarefaAdapter(List<Tarefa> lista, Context contexto, OnTarefaClickListener listener){
         this.tarefas = lista;
         this.context = contexto;
-
+        this.listenerClickTarefa = listener;
 
     }
 
@@ -71,11 +77,19 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
                 holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.red));
 
             }
+
         }
 
         // formata a data de long para string
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         holder.tvData.setText(formatador.format(t.getDataPrevista()));
+
+        holder.itemView.setOnClickListener(v -> {
+
+            // dispara o listener
+            listenerClickTarefa.onClick(v, t);
+
+        });
 
 
     }
@@ -110,6 +124,14 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
 
 
         }
+
+    }
+
+    // interface para o clique na tarefa
+    public interface OnTarefaClickListener{
+        void onClick(View view, Tarefa tarefa);
+
+
 
     }
 

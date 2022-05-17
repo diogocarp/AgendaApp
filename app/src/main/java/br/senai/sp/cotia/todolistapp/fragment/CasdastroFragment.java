@@ -78,10 +78,10 @@ public class CasdastroFragment extends Fragment {
 
 
             // validar os campos
-            if(binding.view1.getText().toString().isEmpty()){
+            if(binding.titulo.getText().toString().isEmpty()){
                 Toast.makeText(getContext(), "Campo título vazio", Toast.LENGTH_SHORT).show();
 
-            }else if(binding.view2.getText().toString().isEmpty()){
+            }else if(binding.descricao.getText().toString().isEmpty()){
                 Toast.makeText(getContext(), "Campo descrição vazio", Toast.LENGTH_SHORT).show();
 
             }else if(dataEscolhida.isEmpty()){
@@ -94,8 +94,8 @@ public class CasdastroFragment extends Fragment {
 
 
                 // popular a tarefa
-                tarefa.setTitulo(binding.view1.getText().toString());
-                tarefa.setDescricao(binding.view2.getText().toString());
+                tarefa.setTitulo(binding.titulo.getText().toString());
+                tarefa.setDescricao(binding.descricao.getText().toString());
 
                 // cria um Calendar e popula com a data que foi selecionada
                 Calendar dataRealizacao = Calendar.getInstance();
